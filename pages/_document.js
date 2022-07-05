@@ -7,7 +7,7 @@ export default function Document() {
             <link rel="icon" href="/logo.png"/>
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
-            <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=VT323&display=swap" rel="stylesheet"/>
         </Head>
         <body>
             <Main />
