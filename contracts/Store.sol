@@ -12,6 +12,7 @@ contract Store {
         uint productId;
         uint price;
         address buyer;
+        string image;
         bool delivered;
     }
 
@@ -22,7 +23,7 @@ contract Store {
     event bought(uint productId, address buyer);
     event delivered(uint productId);
 
-    function registerProduct(string memory _title, string memory _desc, uint _price) public {
+    function registerProduct(string memory _title, string memory _desc, uint _price, string memory _image) public {
         require(_price>0, "Price must be greater than 0");
         Product memory tempProduct;
         tempProduct.title = _title;
@@ -31,6 +32,7 @@ contract Store {
         tempProduct.productId = counter;
         tempProduct.price = _price * 10**18;
         tempProduct.delivered = false;
+        tempProduct.image = _image;
         products.push(tempProduct);
         emit registered(_title, tempProduct.productId, msg.sender);
         counter++;
