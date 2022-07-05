@@ -4,30 +4,6 @@ const secret = process.env.PINATA_SECRET;
 const axios = require('axios');
 const FormData = require('form-data');
 
-export const uploadJSONToIPFS = async(JSONBody) => {
-    const url = `https://api.pinata.cloud/pinning/pinJSONToIPFS`;
-    return axios 
-        .post(url, JSONBody, {
-            headers: {
-                pinata_api_key: key,
-                pinata_secret_api_key: secret,
-            }
-        })
-        .then(function (response) {
-           return {
-               success: true,
-               pinataURL: "https://gateway.pinata.cloud/ipfs/" + response.data.IpfsHash
-           };
-        })
-        .catch(function (error) {
-            console.log(error)
-            return {
-                success: false,
-                message: error.message,
-            }
-        });
-};
-
 export const uploadFileToIPFS = async(file) => {
     const url = `https://api.pinata.cloud/pinning/pinFileToIPFS`;
     
@@ -65,8 +41,8 @@ export const uploadFileToIPFS = async(file) => {
             maxBodyLength: 'Infinity',
             headers: {
                 'Content-Type': `multipart/form-data; boundary=${data._boundary}`,
-                pinata_api_key: key,
-                pinata_secret_api_key: secret,
+                pinata_api_key: "ac0fbf09da3b4bf3235e",
+                pinata_secret_api_key: "7476bb0a547050ca3e660556c0a9b54ce7f0e4a702ecbbca7576d6b5ca3e1980",
             }
         })
         .then(function (response) {
