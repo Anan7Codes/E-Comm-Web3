@@ -1,7 +1,7 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react';
 import { uploadFileToIPFS } from '@/utils/pinata'
+import Layout from '@/components/Layout';
 
 export default function Home() {
   const [file, setFile] = useState(null)
@@ -26,15 +26,18 @@ export default function Home() {
   }
 
   return (
-    <div className="center">
-      <div className="form-input">
-        <div className="preview">
-          <img id="file-ip-1-preview"/>
-        </div>  
-        <label htmlFor="file-ip-1">Upload Image</label>
-         <input type="file" id="file-ip-1" accept="image/*" onChange={( e => showPreview(e))}></input>  
-         <button onClick={UploadFile}>Upload</button>
-      </div>
-    </div> 
+    <Layout>
+      <div className="center">
+        <div className="form-input">
+          <div className="preview">
+            <img id="file-ip-1-preview"/>
+          </div>  
+          <label htmlFor="file-ip-1">Upload Image</label>
+          <input type="file" id="file-ip-1" accept="image/*" onChange={( e => showPreview(e))}></input>  
+          <button onClick={UploadFile}>Upload</button>
+        </div>
+      </div> 
+    </Layout>
+    
   )
 }

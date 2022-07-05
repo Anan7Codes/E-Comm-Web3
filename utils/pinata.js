@@ -41,8 +41,8 @@ export const uploadFileToIPFS = async(file) => {
             maxBodyLength: 'Infinity',
             headers: {
                 'Content-Type': `multipart/form-data; boundary=${data._boundary}`,
-                pinata_api_key: "ac0fbf09da3b4bf3235e",
-                pinata_secret_api_key: "7476bb0a547050ca3e660556c0a9b54ce7f0e4a702ecbbca7576d6b5ca3e1980",
+                pinata_api_key: key,
+                pinata_secret_api_key: secret,
             }
         })
         .then(function (response) {
