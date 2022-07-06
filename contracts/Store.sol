@@ -55,4 +55,8 @@ contract Store {
         products[_productId-1].seller.transfer(products[_productId-1].price);
         emit delivered(_productId);
     }
+
+    function getAllProducts() public view returns (Product[] memory) {
+        return products;
+    }
 }

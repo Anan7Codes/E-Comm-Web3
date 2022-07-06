@@ -1,3 +1,4 @@
+require('dotenv').config()
 const key = process.env.PINATA_KEY;
 const secret = process.env.PINATA_SECRET;
 
