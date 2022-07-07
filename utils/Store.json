@@ -1,0 +1,225 @@
+{
+    "address": "0xae35E51F26E404eCE85F026F98671E2bE4A7e07e",
+    "abi": [
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "productId",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "buyer",
+              "type": "address"
+            }
+          ],
+          "name": "bought",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "productId",
+              "type": "uint256"
+            }
+          ],
+          "name": "delivered",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "productId",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "seller",
+              "type": "address"
+            }
+          ],
+          "name": "registered",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_productId",
+              "type": "uint256"
+            }
+          ],
+          "name": "buy",
+          "outputs": [],
+          "stateMutability": "payable",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_productId",
+              "type": "uint256"
+            }
+          ],
+          "name": "delivery",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        },
+        {
+          "inputs": [],
+          "name": "getAllProducts",
+          "outputs": [
+            {
+              "components": [
+                {
+                  "internalType": "string",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "desc",
+                  "type": "string"
+                },
+                {
+                  "internalType": "address payable",
+                  "name": "seller",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "productId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "price",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "buyer",
+                  "type": "address"
+                },
+                {
+                  "internalType": "string",
+                  "name": "image",
+                  "type": "string"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "delivered",
+                  "type": "bool"
+                }
+              ],
+              "internalType": "struct Store.Product[]",
+              "name": "",
+              "type": "tuple[]"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "name": "products",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "desc",
+              "type": "string"
+            },
+            {
+              "internalType": "address payable",
+              "name": "seller",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "productId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "buyer",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "image",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "delivered",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "_title",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_desc",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "_image",
+              "type": "string"
+            }
+          ],
+          "name": "registerProduct",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+    ]
+}

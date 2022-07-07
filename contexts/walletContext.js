@@ -1,15 +1,15 @@
 import { createContext, useState } from 'react';
 
-export const walletContext = createContext();
+export const WalletContext = createContext();
 
 const WalletProvider = (props) => {
     const [isConnected, setIsConnected] = useState(false);
 
     return (
                 // this is the provider providing state
-        <walletContext.Provider value={[isConnected, setIsConnected]}>
+        <WalletContext.Provider value={[isConnected, setIsConnected]}>
             {props.children}
-        </walletContext.Provider>
+        </WalletContext.Provider>
     );
 };
 

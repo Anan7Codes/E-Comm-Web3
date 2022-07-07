@@ -20,11 +20,11 @@ a {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, span {
+h1, h2, h3, h4, h5, h6, span, button {
   font-family: 'VT323', monospace;
 }
 
-p {
+p, label {
   font-family: 'Space Mono', monospace;
 }
 
@@ -39,9 +39,7 @@ p {
 .form-input {
   width:350px;
   padding:20px;
-  background:#fff;
-  box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377),
-              3px 3px 7px rgba(94, 104, 121, 0.377);
+  background: transparent;
 }
 
 .form-input img {
@@ -56,17 +54,16 @@ p {
 
 .form-input label {
   display:block;
-  width:45%;
-  height:45px;
+  width: 150px;
+  height: 45px;
   margin-left: 25%;
   line-height:50px;
   text-align:center;
-  background:#1172c2;
+  background:#836953;
   color:#fff;
   font-size:15px;
   font-family:"Open Sans",sans-serif;
-  text-transform:Uppercase;
-  font-weight:600;
+  text-transform: capitalize;
   border-radius:5px;
   cursor:pointer;
 }

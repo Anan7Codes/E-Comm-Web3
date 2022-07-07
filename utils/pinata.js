@@ -1,18 +1,17 @@
-
 const key = process.env.PINATA_KEY;
 const secret = process.env.PINATA_SECRET;
 
 const axios = require('axios');
 const FormData = require('form-data');
 
-export const uploadFileToIPFS = async(file) => {
+export const uploadFileToIPFS = async(file, fileName) => {
     const url = `https://api.pinata.cloud/pinning/pinFileToIPFS`;
     
     let data = new FormData();
     data.append('file', file);
 
     const metadata = JSON.stringify({
-        name: 'testname',
+        name: fileName,
         keyvalues: {
             exampleKey: 'exampleValue'
         }
