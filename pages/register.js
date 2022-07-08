@@ -29,7 +29,6 @@ const Register = () => {
     }
 
     const RegisterProduct = async () => {
-        alert(title + desc + price)
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
         let contract = new ethers.Contract(Store.address, Store.abi, signer)
