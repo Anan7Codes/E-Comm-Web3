@@ -35,7 +35,6 @@ const Register = () => {
         const image = await UploadFile()
         let transaction = await contract.registerProduct(title, desc, price, image)
         
-        console.log("Response", transaction)
     }
 
     return (

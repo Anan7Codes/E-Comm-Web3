@@ -15,6 +15,7 @@ export default function Home() {
       let contract = new ethers.Contract(Store.address, Store.abi, signer)
       let transaction = await contract.getAllProducts()
       setProducts(transaction)
+      console.log("Response", transaction)
     }
     GetDetails()
   }, [])
